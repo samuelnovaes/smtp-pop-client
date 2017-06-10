@@ -1,0 +1,74 @@
+*{
+	font-family: arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	cursor: default;
+	font-size: 10pt;
+}
+
+html, body {
+	background-color: #eee;
+	overflow: hidden;
+}
+
+#info {
+	text-align: center;
+}
+
+#console {
+	float: left;
+}
+
+#console ul {
+	list-style: none;
+}
+
+fieldset {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #aaa;
+}
+
+hr {
+	border-top: 1px solid #aaa;
+	border-bottom: none;
+}
+
+legend {
+	color: black;
+	padding: 0 3px 0 3px;
+}
+
+textarea{
+	resize: none;
+}
+
+.campo {
+	outline: none;
+	cursor: text;
+	width: calc(100% - 15px);
+}
+
+.campo, button {
+	padding: 5px;
+}
+
+.corpo {
+	float: left;
+	max-height: 100%;
+	max-width: 100%;
+	height: calc(100vh - 50px);
+	width: 300px;
+}
+
+.logs {
+	width: 100%;
+	height: calc(100% - 20px);
+	border: none;
+	background-color: #eee;
+}
+
+.logs-area {
+	overflow: auto;
+}

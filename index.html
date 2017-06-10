@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cliente de Emails</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+	<div id="app">
+		<fieldset class="corpo">
+			<legend>SMTP</legend>
+			<fieldset>
+				<legend>Conectar com servidor</legend>
+				<label for="smtp-host">Servidor:</label>
+				<br>
+				<input class="campo" type="text" id="smtp-host" v-model="smtp.host">
+				<br>
+				<br>
+				<label for="smtp-port">Porta:</label>
+				<br>
+				<input class="campo" type="text" id="smtp-port" v-model="smtp.port">
+			</fieldset>
+			<fieldset>
+				<legend>Enviar mensagem</legend>
+				<label for="smtp-from">De:</label>
+				<br>
+				<input class="campo" type="text" id="fsmtp-rom" v-model="smtp.from">
+				<br>
+				<br>
+				<label for="smtp-to">Para:</label>
+				<br>
+				<input class="campo" type="text" id="smtp-to" v-model="smtp.to">
+				<br>
+				<br>
+				<label for="smtp-subject">Assunto:</label>
+				<br>
+				<input class="campo" type="text" id="smtp-subject" v-model="smtp.subject">
+				<br>
+				<br>
+				<label for="smtp-message">Mensagem:</label>
+				<br>
+				<textarea class="campo" id="smtp-message" rows="5" v-model="smtp.message"></textarea>
+				<br>
+				<br>
+				<button @click="enviar">Enviar</button>
+			</fieldset>
+		</fieldset>
+		<fieldset class="corpo">
+			<legend>POP3</legend>
+			<fieldset>
+				<legend>Conectar com servidor</legend>
+				<label for="pop-host">Servidor:</label>
+				<br>
+				<input class="campo" type="text" id="pop-host" v-model="pop.host">
+				<br>
+				<br>
+				<label for="pop-port">Porta:</label>
+				<br>
+				<input class="campo" type="text" id="pop-port" v-model="pop.port">
+			</fieldset>
+			<fieldset>
+				<legend>Autenticar</legend>
+				<label for="pop-user">Usuário:</label>
+				<br>
+				<input class="campo" type="text" id="pop-user" v-model="pop.user">
+				<br>
+				<br>
+				<label for="pop-password">Senha:</label>
+				<br>
+				<input class="campo" type="password" id="pop-password" v-model="pop.password">
+			</fieldset>
+			<fieldset>
+				<legend>Ações</legend>
+				<button @click="obter">Listar mensagens</button>
+				<br>
+				<br>
+				<hr>
+				<br>
+				<label for="pop-msg-index">Mensagem:</label>
+				<br>
+				<input class="campo" type="number" min="0" id="pop-msg-index" v-model="pop.msgIndex">
+				<br>
+				<br>
+				<button @click="ler">Ler</button>
+				<button @click="deletar">Deletar</button>
+			</fieldset>
+		</fieldset>
+		<fieldset class="corpo logs-area">
+			<legend>Logs</legend>
+			<textarea class="logs" v-model="logs" disabled></textarea>
+		</fieldset>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
