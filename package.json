@@ -4,5 +4,5 @@
   "description": "SMTP Client",
   "main": "index.html",
   "author": "Samuel Novaes e Camila Ribeiro",
-  "license": "ISC"
+  "license": "BSD-3-Clause"
 }
