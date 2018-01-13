@@ -1,7 +1,8 @@
+const Vue = require('vue/dist/vue.min.js')
 const net = require('net');
-const win = require('nw.gui').Window.get();
+const win = require('electron').remote.getCurrentWindow();
 
-new Vue({
+let vm = new Vue({
 	el: '#app',
 	created(){
 		win.maximize();
