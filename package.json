@@ -8,10 +8,10 @@
 	"scripts": {
 		"start": "electron ."
 	},
-	"devDependencies": {
-		"electron": "^1.7.10"
-	},
 	"dependencies": {
 		"vue": "^2.5.13"
+	},
+	"devDependencies": {
+		"electron": "^1.7.11"
 	}
 }
